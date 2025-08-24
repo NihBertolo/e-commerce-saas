@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5532a04f-c9be-4209-bf26-e6f220efeff6" name="Changes" comment="" />
+    <list default="true" id="5532a04f-c9be-4209-bf26-e6f220efeff6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../img/e-commerce.drawio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../readme" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +23,21 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "NihBertolo"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/NihBertolo/e-commerce-saas.git",
+    "accountId": "39532b2c-f5d0-4b52-9975-f7faddf31182"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -33,6 +51,7 @@
     "Kotlin.EcommerceApplicationKt.executor": "Run",
     "Maven.app [clean,install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "feature/implementation",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Nicole/Documents/freelas/e-commerce_workana/app",
     "project.structure.last.edited": "Modules",

@@ -1,5 +1,7 @@
 # SaaS E-commerce Workana
 
+![Arquitetura do projeto](img/e-commerce.drawio.png)
+
 Este projeto é uma solução SaaS para e-commerce, permitindo que múltiplos lojistas criem e gerenciem suas lojas online de forma simples e escalável.
 
 ## Funcionalidades
@@ -15,10 +17,10 @@ Este projeto é uma solução SaaS para e-commerce, permitindo que múltiplos lo
 
 - Backend: Node.js, Express
 - Frontend: React.js
-- Banco de Dados: PostgreSQL
+- Banco de Dados: PostgreSQL, Redis e Neo4J
 - Autenticação: JWT
 - Armazenamento de arquivos: AWS S3
-- Infraestrutura: Docker, NGINX
+- Infraestrutura: Docker, NGINX, ECS
 
 ## Arquitetura
 
@@ -31,4 +33,3 @@ A arquitetura do projeto segue o padrão de microsserviços, garantindo escalabi
 - **Frontend Web:** Interface para lojistas e clientes.
 - **Banco de Dados:** Armazena informações persistentes.
 
-Veja o desenho da arquitetura na pasta `img`:
