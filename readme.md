@@ -4,14 +4,67 @@
 
 Este projeto é uma solução SaaS para e-commerce, permitindo que múltiplos lojistas criem e gerenciem suas lojas online de forma simples e escalável.
 
-## Funcionalidades
+# Funcionalidades Planejadas e Em Andamento
 
-- Cadastro e autenticação de lojistas
-- Gerenciamento de produtos, categorias e estoque
-- Processamento de pedidos e pagamentos
-- Painel administrativo para relatórios e análises
-- Integração com gateways de pagamento
-- Suporte a múltiplos temas e personalização de lojas
+## 🔑 Segurança & Identidade
+
+- [x] OAuth com Gmail/LinkedIn/Facebook
+- [ ] MFA (2FA) opcional (Google Authenticator / SMS / Email)
+- [ ] Gestão de roles por tenant (admin do tenant, gestor, usuário comum)
+- [ ] Rate limiting e proteção contra fraude (especialmente na API de pagamentos)
+- [ ] Auditoria de ações (quem fez o quê, quando)
+
+## 🛒 Domínios de Negócio
+
+- [x] Cart / Catálogo / Order / Payment / User / Common
+- [ ] Shipping/Delivery: integração com Correios, Loggi, Jadlog etc.
+- [ ] Pricing & Discount Engine: cupons, promoções, regras de frete grátis
+- [ ] Invoice/Fiscal: integração com Nota Fiscal eletrônica (NFe)
+- [ ] Tenant Management: domínio próprio para criar, atualizar e suspender tenants
+
+## 💳 Pagamentos
+
+- [x] Estrutura multi-gateway definida
+- [ ] Primeira integração real (Stripe / Pagar.me / MercadoPago)
+- [ ] Webhooks de conciliação (atualizar status de pedidos com base na resposta do gateway)
+- [ ] Gestão de chargebacks
+- [ ] Split rules configuráveis (taxa SaaS fixa + percentual do tenant)
+
+## 🏗️ Infraestrutura (Terraform + GitHub Actions)
+
+**Terraform módulos:**
+- [x] VPC, RDS, Redis, Security Groups
+- [ ] ECS/EKS para rodar a app
+- [ ] CloudFront + ACM (SSL) para frontend/API Gateway
+- [ ] S3 para catálogo de imagens
+- [ ] Secrets Manager / SSM para segredos dos tenants (API keys de gateways)
+
+**GitHub Actions:**
+- [ ] CI: build + testes unitários + lint + sonar
+- [ ] CD: deploy automatizado em dev/staging/prod
+- [ ] Segurança: dependabot, verificação de CVEs, scan de IaC
+
+## 📊 Observabilidade
+
+- [ ] Logs estruturados (JSON + Correlation ID por tenant)
+- [ ] Métricas (Prometheus/OpenTelemetry)
+- [ ] Dashboards (Grafana/CloudWatch)
+- [ ] Alertas (pagamentos falhos acima de X%, latência elevada etc)
+
+## 📈 Escalabilidade & Multi-Tenant
+
+- [ ] Tenant resolver (middleware para identificar tenant via subdomínio, JWT ou header)
+- [ ] Isolamento de dados: Shared DB com tenant_id OU schema por tenant
+- [ ] Cache multi-tenant: Redis segregado por chave tenantId:resource
+- [ ] Fila assíncrona (SQS/Kafka) para ordens, webhooks e notas fiscais
+
+## 🧾 Tributação (Brasil)
+
+- [ ] Gateway centralizado (marketplace model): SaaS emite NFe de intermediação, tenant emite NFe de venda
+- [ ] Integração com SEFAZ (Nota Fiscal Eletrônica)
+- [ ] Cálculo de ISS (serviço da plataforma) e ICMS/Simples Nacional (lojista)
+- [x] Regras de split para separação de valores
+
 
 ## Tecnologias Utilizadas
 
